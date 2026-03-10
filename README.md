@@ -63,4 +63,5 @@ NOTE: in the minut I'm writing, the version in my side is: 3.13.12
     e) Check if the ico is still displayed now. If the error is staying remaining, analyse why.
 
 
+SOURCE: I write this page using some informations and code requested sometimes to Copilot. AI helps to improve speed of delivery but I don't find a sufficient quality. I check each result befoire I validate.
 ```
