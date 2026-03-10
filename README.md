@@ -6,6 +6,13 @@
 #
 ####################################################################################
 
+                                      PREPARATION
+
+INSTALL PYTHON (WINDOWS)
+PowerShell> winget configure -f https://aka.ms/python-config
+
+IDE for coding: VSCode
+(URL) https://code.visualstudio.com
 
 CHECK INSTALLED PYTHON MODULES (example, CMD)
 py -m pip list
@@ -22,6 +29,8 @@ PROMPT
   d) check the python running: [python --version] => if it's a fail, use [py] as [py --version]
 
 ---
+
+                                      SCRIPTS
 
 1. Directory {PNGICOEXE} => CREATE ICO FROM PNG / CHECK ICO / ICO IN EXE
 
@@ -45,5 +54,6 @@ PROMPT
     c) run under a CMD [del /A /Q "%localappdata%\Microsoft\Windows\Explorer\iconcache*"]
     d) run under a CMD [start explorer.exe]
     e) Check if the ico is still displayed now. If the error is staying remaining, analyse why.
+
 
 ```
