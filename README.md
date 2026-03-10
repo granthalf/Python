@@ -23,7 +23,7 @@ PROMPT
 
 ---
 
-1. CREATE ICO / CHECK ICO / ICO IN EXE
+1. Directory {PNGICOEXE} => CREATE ICO FROM PNG / CHECK ICO / ICO IN EXE
 
   A. PNG => ICO
     a) Start from a PNG picture
