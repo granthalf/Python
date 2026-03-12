@@ -4,7 +4,14 @@ from selenium import webdriver
 from selenium.webdriver.edge.options import Options
 from selenium.webdriver.edge.service import Service
 
-# Vérification des arguments
+// Reminder:
+// CMD, go to Python Dir (in case of PATH issue)
+// python -m pip list
+
+// Install SELENIUM:
+// pip install selenium
+
+# Check parameter
 if len(sys.argv) < 2:
     print("Usage : python script.py <url>")
     sys.exit(1)
@@ -26,17 +33,17 @@ driver = webdriver.Edge(service=service, options=options)
 driver.get(urlweb)
 print("TITLE=    " + driver.title)
 
-# Récupération des cookies
+# Easy, we get cookies
 cookies = driver.get_cookies()
 
-# Export dans un fichier texte
+# Export them into a text file
 with open("cookies-recovery.txt", "w", encoding="utf-8") as f:
     f.write(json.dumps(cookies, indent=4))
 
-# Filtrer uniquement les cookies HttpOnly
+# Filter ony HttpOnly cookies
 httponly_cookies = [c for c in cookies if c.get("httpOnly")]
 
-# Export dans un fichier texte
+# Export into a text file
 with open("cookies-httponly.txt", "w", encoding="utf-8") as f:
     f.write(json.dumps(httponly_cookies, indent=4))
 
