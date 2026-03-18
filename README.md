@@ -19,8 +19,8 @@ py -m pip list
 
 PRE-REQUISITES
 pip install pyinstaller
-pip install Pillow
-pip install pyzipper [optional]
+pip install Pillow [PNGICOEXE]
+pip install pyzipper [PACKARCHIVE]
 
 NOTE: if pip is not recognized, you need to ensure your path should find pip*.exe (usually anything like "???\AppData\Local\Programs\Python\Python313\Scripts")
 
