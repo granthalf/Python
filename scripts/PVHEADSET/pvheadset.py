@@ -16,7 +16,7 @@ cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 audio_rate = 48000
 audio_channels = 2
 
-print("Server: rtsp://127.0.0.1:8554/live")
+print("Server: rtsp://0.0.0.0:8554/live")
 
 # --- FFmpeg ---
 ffmpeg_cmd = [
@@ -40,7 +40,7 @@ ffmpeg_cmd = [
     "-acodec", "aac",
     "-f", "rtsp",
     "-rtsp_transport", "tcp",
-    "rtsp://127.0.0.1:8554/live"
+    "rtsp://0.0.0.0:8554/live"
 ]
 
 proc = subprocess.Popen(ffmpeg_cmd, stdin=subprocess.PIPE)
