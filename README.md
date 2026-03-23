@@ -21,7 +21,7 @@ PRE-REQUISITES
 pip install pyinstaller
 pip install Pillow [PNGICOEXE]
 pip install pyzipper [PACKARCHIVE]
-
+pip install opencv-python sounddevice numpy [PVHEADSET]
 
 NOTE: if pip is not recognized, you need to ensure your path should find pip*.exe (usually anything like "???\Python\Python313\Scripts")
 NOTE²: summup about python rtsp => 1/ a try on "pip install pygobject [PVHEADSET]" => 2/ raised "ERROR: Dependency 'girepository-2.0' is required but not found" => 3/ lib "libgirepository-1.0-dev"
