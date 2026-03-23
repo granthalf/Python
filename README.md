@@ -82,7 +82,8 @@ NOTE: in the minut I'm writing, the version in my side is: 3.14.3
         a) install FFMPEG as described in a NOTE, top of this document
         b) watch sounds availabe in Windows:             CMD> control mmsys.cpl,,1
         c) watch sounds availabe in Windows from FFMPEG: CMD> ffmpeg -list_devices true -f dshow -i "dummy:"
-        d) 
+        d) recover all available informations about an input media: CMD> ffmpeg -f dshow -list_options true -i audio="Mixage stéréo (Realtek(R) Audio)"
+        e) sound&video: CMD> ffmpeg -hide_banner -f dshow -list_devices true -i dummy:
 
 
 SOURCE: I write this page using some informations and code requested sometimes to Copilot. AI helps to improve speed of delivery but I don't find a sufficient quality. I check each result before I validate.
