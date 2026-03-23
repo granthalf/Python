@@ -21,9 +21,12 @@ PRE-REQUISITES
 pip install pyinstaller
 pip install Pillow [PNGICOEXE]
 pip install pyzipper [PACKARCHIVE]
-pip install pygobject [PVHEADSET]
+pip install gstreamer-bundle [PVHEADSET]
 
 NOTE: if pip is not recognized, you need to ensure your path should find pip*.exe (usually anything like "???\Python\Python313\Scripts")
+NOTE²: if you install "pygobject" standalone, as "pip install pygobject [PVHEADSET]", it could be raised this error: "ERROR: Dependency 'girepository-2.0' is required but not found".
+       You need lib "libgirepository-1.0-dev" and this is included in "GSTREAMER used for this case" (https://gstreamer.freedesktop.org/download/)
+       Solution: "pygobject" is included in "Gstreamer bundle"
 
 PROMPT
   a) use a console, for example CMD
