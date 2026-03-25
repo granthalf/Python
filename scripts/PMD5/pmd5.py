@@ -1,5 +1,8 @@
 #Use this website in order to test the strength of your hash:
-#https://md5.gromweb.com/
+#https://www.dcode.fr/hash-function
+#
+#be careful /!\ gromweb is displaying hashes on the bottom of the page => better to avoid this site
+#
 import sys
 import hashlib
 
