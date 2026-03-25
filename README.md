@@ -88,5 +88,12 @@ NOTE: in the minut I'm writing, the version in my side is: 3.14.3
         g) check informations about a flow: ffprobe rtsp://127.0.0.1:8554/live
 
 
+5. Directory {PMD5} => A SIMPLE SCRIPT TO HASH A TEXT WITH MD5
+
+
+
+
+
+
 SOURCE: I write this page using some informations and code requested sometimes to Copilot. AI helps to improve speed of delivery but I don't find a sufficient quality. I check each result before I validate.
 ```
