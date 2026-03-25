@@ -2,6 +2,7 @@
 #https://www.dcode.fr/hash-function
 #
 #be careful /!\ gromweb is displaying hashes on the bottom of the page => better to avoid this site
+#mechanism of unhash md5: by dictionary.
 #
 import sys
 import hashlib
