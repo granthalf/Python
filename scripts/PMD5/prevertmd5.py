@@ -1,3 +1,4 @@
+import os
 import sys
 import unicodedata
 import hashlib
@@ -13,6 +14,38 @@ import hashlib
 
 # Global setting: enable or disable accent removal
 REMOVE_ACCENTS = False
+
+def detect_encoding(filename):
+    """
+    Detect encoding by trying UTF-8, ISO-8859-1, CP1252.
+    Returns the first encoding that works.
+    """
+    # Try UTF-8
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            f.read()
+        return "utf-8"
+    except:
+        pass
+
+    # Try ISO-8859-1
+    try:
+        with open(filename, "r", encoding="iso-8859-1") as f:
+            f.read()
+        return "iso-8859-1"
+    except:
+        pass
+
+    # Try CP1252 (Windows)
+    try:
+        with open(filename, "r", encoding="cp1252") as f:
+            f.read()
+        return "cp1252"
+    except:
+        pass
+
+    # Fallback
+    return "utf-8"
 
 def compute_md5(text: str) -> str:
     """Return the MD5 hash of the given text."""
@@ -50,14 +83,27 @@ def compute_uppercase(text: str) -> str:
 
 def load_dictionary(filename: str) -> dict:
     """
-    Load all words from the dictionary file.
-    Returns a HASH MAP:
-        { normalized_uppercase_word : original_word }
+    Load dictionary with automatic encoding detection.
+    Log file name = <filename>.log
     """
     hashmap = {}
 
-    with open(filename, "r", encoding="utf-8") as file:
-        for line in file:
+    # Detect encoding
+    encoding = detect_encoding(filename)
+    print(f"Detected encoding for {filename}: {encoding}")
+
+    # Build log filename
+    base, _ = os.path.splitext(filename)
+    log_filename = base + ".log"
+
+    log = open(log_filename, "w", encoding="utf-8")
+
+    with open(filename, "r", encoding=encoding, errors="replace") as file:
+        for line_number, line in enumerate(file, start=1):
+
+            # Log line number
+            log.write(f"Processing line {line_number}\n")
+
             original = line.strip()
             if not original:
                 continue
@@ -65,15 +111,15 @@ def load_dictionary(filename: str) -> dict:
             normalized = normalize(original, REMOVE_ACCENTS)
             key = normalized.upper()
 
-            # Store original word for output
             hashmap[key] = original
 
+    log.close()
     return hashmap
 
 
 def find_word(input_word: str, hashmap: dict):
     """
-    Compare the input word (NOT modified) to the UPPERCASE dictionary words.
+    Compare the input word (not modified) to the UPPERCASE dictionary words.
     Return the ORIGINAL dictionary word if found, otherwise None.
     """
     input_upper = input_word.upper()  # input word is NOT normalized
@@ -82,17 +128,18 @@ def find_word(input_word: str, hashmap: dict):
 
 
 if __name__ == "__main__":
-    # Ensure a word was passed as argument
-    if len(sys.argv) != 2:
-        print("Usage: python check_dictionary.py <word>")
+    # Expect: python check_dictionary.py <dictionary_file> <word>
+    if len(sys.argv) != 3:
+        print("Usage: python check_dictionary.py <dictionary_file> <word>")
         sys.exit(1)
 
-    # First argument is the word to check (NOT modified)
-    user_word = sys.argv[1]
+    # First argument is the word to check (as is)
+    dictionary_file = sys.argv[1]
+    user_word = sys.argv[2]
     user_word = user_word.upper()
 
-    # Load dictionary as a HASH MAP
-    hashmap = load_dictionary("dictionary.txt")
+    # Load dictionary as a HASH MAP: you may use the classical hacker passwords dictionnary ;-)
+    hashmap = load_dictionary(dictionary_file)
 
     # Search for the word
     found_word = find_word(user_word, hashmap)
