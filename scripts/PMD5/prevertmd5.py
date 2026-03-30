@@ -11,6 +11,10 @@ import hashlib
 # 1. Ask AI to create script to manage dictionary and easy compare with an input parameter.
 # 2. Ask AI to update script to manage dictionary with a level-up compare function (as Uppercase).
 # 3. Update the script and add md5 instead of uppercase. :p
+#
+# (OR) Search on the Web:
+#Another source, Another way for the same goal.
+#https://www.youtube.com/watch?v=9J7X0l6r2Gs
 
 # Global setting: enable or disable accent removal
 REMOVE_ACCENTS = False
