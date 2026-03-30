@@ -15,6 +15,9 @@ import hashlib
 # (OR) Search on the Web:
 #Another source, Another way for the same goal.
 #https://www.youtube.com/watch?v=9J7X0l6r2Gs
+#
+#More for the Topic "Passwords"?
+#https://www.youtube.com/watch?v=m-OjoQBHPyU
 
 # Global setting: enable or disable accent removal
 REMOVE_ACCENTS = False
