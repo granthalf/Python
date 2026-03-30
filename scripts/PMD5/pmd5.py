@@ -1,5 +1,3 @@
-#Use this website in order to test the strength of your hash:
-#https://md5.gromweb.com/
 import sys
 import hashlib
 
