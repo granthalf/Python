@@ -70,6 +70,9 @@ NOTE: in the minut I'm writing, the version in my side is: 3.14.3
     c) run under a CMD [del /A /Q "%localappdata%\Microsoft\Windows\Explorer\iconcache*"]
     d) run under a CMD [start explorer.exe]
     e) Check if the ico is still displayed now. If the error is staying remaining, analyse why.
+  
+  E. PNG TO SVG
+    a) [png2svg.py] Turn a PNG file into a SVG file. Useful to have on next step the code Base64.
 
 
 2. Directory {SELENIUM} => CHECK COOKIES => [browserhdl.py]
