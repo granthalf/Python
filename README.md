@@ -57,7 +57,7 @@ NOTE: in the minut I'm writing, the version in my side is: 3.14.3
 
   B. Check ICO file
     a) [checkico.py] Check the ICO file if the file has multi sizes inside (it is required: only 1 equals "it's not validated") => [py checkico.py]
-    b) (build) you can create a python exe program with this line code: [pyinstaller --onefile --icon=file.ico file.py]
+    b) (build) you can create a python exe program with this line code: [pyinstaller --onefile --icon=file.ico file.py] [py -m pyinstaller --onefile file.py]
     c) [checkicoinexe.py] Check the ico inside the exe file produced => [py checkicoinexe.py]
 
   C. VALIDATION ICO in EXE
