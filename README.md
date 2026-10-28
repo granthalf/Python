@@ -95,6 +95,9 @@ NOTE: in the minut I'm writing, the version in my side is: 3.14.3
 5. Directory {PMD5} => A SIMPLE SCRIPT TO HASH A TEXT WITH MD5
 
 
+6. Directory {SPLITMERGE} => A SCRIPT TO SPLIT A FILE INTO x PARTS THEN MERGE IT AGAIN => [splitmerge.py]
+
+
 
 
 
