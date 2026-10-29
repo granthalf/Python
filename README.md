@@ -102,5 +102,5 @@ NOTE: in the minut I'm writing, the version in my side is: 3.14.3
 
 
 
-SOURCE: I write this page using some informations and code requested sometimes to Copilot. AI helps to improve speed of delivery but I don't find a sufficient quality. I check each result before I validate.
+SOURCE: I write this page using some informations and code requested sometimes to Copilot (+ ChatGPT). AI helps to improve speed of delivery but I don't find a sufficient quality. I check each result before I validate.
 ```
